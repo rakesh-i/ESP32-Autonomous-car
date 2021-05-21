@@ -148,7 +148,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@rakesh_.chavan](https://www.instagram.com/rakesh_.chavan/) - rakesh.007ac@gmail.com
+Rakesh Chavan - [@rakesh_.chavan](https://www.instagram.com/rakesh_.chavan/) - rakesh.007ac@gmail.com
 
 Project Link: [https://github.com/rakesh-i/Autonomous-car/](https://github.com/rakesh-i/Autonomous-car/)
 
