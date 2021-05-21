@@ -49,7 +49,7 @@ Key Features:
 * This porject uses very cheap off the shelf items to build your own autonomous car.
 * Easy to understand and train your own AI models.
 
-Of course there are plug and play systems which you can buy, But those are very costly or you need a CS degree from MIT to understand the documentation, which can be little intimidating for bigginers. Thanks to all the people who have contributed to expanding this project and thanks for using it. 
+Of course there are plug and play systems which you can buy, But those are very costly or you need a CS degree from MIT to understand the documentation, which can be little intimidating for bigginers. I was one of those guys. So here's my Project. Thanks to all the people who have contributed to expanding this project and thanks for using it. 
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
