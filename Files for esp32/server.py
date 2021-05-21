@@ -12,7 +12,7 @@ def soc():
     
     #socket setup
     s = socket.socket()         # Create a socket object
-    host = '192.168.137.142'    # Get local machine name
+    host = 'Esp32 ip'           # esp32 ip on network
     port = 12345                # Reserve a port for your service.
     s.bind((host, port))        # Bind to the port
     s.listen(5)                 # Now wait for client connection.
