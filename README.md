@@ -115,7 +115,7 @@ Follow this [link](https://github.com/rakesh-i/ESP32-RC-car/tree/main) on how to
 
 <!-- USAGE EXAMPLES -->
 ## Training
-### Before you start, I recommend you to watch [this]() playlist on autonomous vehicles in GTA V game by [Sentdex]()
+### Before you start, I would recommend you to watch [this]() playlist on autonomous vehicles in GTA V game by [Sentdex]()
 1. Open Training folder from repo.
 2. Turn on the car and put it on the track you have prepared.
 3. Wait for onboard led of esp32 to turn off.
