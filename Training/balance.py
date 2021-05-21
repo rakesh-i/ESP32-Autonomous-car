@@ -40,5 +40,5 @@ final_data = forwards + lefts + rights
 
 shuffle(final_data)
 print(len(final_data))
-np.save('trained.npy', final_data)
+np.save('balanced.npy', final_data)
 
