@@ -80,7 +80,7 @@ Follow this [link](https://github.com/rakesh-i/ESP32-RC-car/tree/main) on how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/rakesh-i/Autonomous-car
    ```
 2. Install MicroPyhon on ESP32
    
