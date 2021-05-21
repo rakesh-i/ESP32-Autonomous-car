@@ -60,7 +60,7 @@ while(True):
     screen = cv2.cvtColor(rotate, cv2.COLOR_BGR2GRAY)
     screen = cv2.resize(screen, (80, 60))
     a.pop()
-    print(a)
+    #print(a)
     training_data.append([screen, a])
     cv2.imshow('rotate', rotate)
     cv2.imshow('screen', screen)
