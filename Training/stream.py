@@ -10,7 +10,7 @@ port = 12345                # Reserve a port for your service.
 s.connect((host, port))
 
 
-cap = cv2.VideoCapture('http://111.111.111.11:11/stream') #esp32cam ip stream. Check on esp32cam serial for ip
+cap = cv2.VideoCapture('http://111.111.111.11:81/stream') #esp32cam ip stream. Check on esp32cam serial for ip
 time.sleep(5)               #wait for 5 sec
 print('start')
 
