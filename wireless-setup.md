@@ -12,7 +12,7 @@
     #example: station.ifconfig(('192.168.180.180', '255.255.255.9', '192.168.180.1', '8.8.8.8'))
     #if you are using laptop as access point: station.ifconfig(('static ip you want to assign', 'subnet mask', 'host ip', 'host ip'))
     ```
-3. In server.py and command_server.py you need to type the static ip you assigned to the ESP32 here
+3. In server.py you need to type the static ip you assigned to the ESP32 here
    ```sh
    host = '111.111.111.111'    # esp32's ip on network
    ```
