@@ -10,7 +10,7 @@ MODEL_NAME = 'autonomous_car-{}-{}-{}-epochs.model'.format(LR, 'alexnet',EPOCHS)
 
 model = alexnet(WIDTH, HEIGHT, LR)
 
-train_data = np.load('trained.npy', allow_pickle=True)
+train_data = np.load('balanced.npy', allow_pickle=True)
 
 train = train_data[:-200]
 test = train_data[-200:]
