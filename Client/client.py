@@ -7,7 +7,7 @@ from log import key_check
 
 
 s = socket.socket()         # Create a socket object
-host = '192.168.137.142' # Get local machine name
+host = '192.168.137.142'    # esp32 ip
 port = 12345                # Reserve a port for your service.
 s.connect((host, port))
 #a = 'b'
@@ -37,25 +37,10 @@ while True:
     x += ',"s":'
     x += str(a[2])
     x += "}"
-    #print(x)
-    #da = json.dumps(x)
-    #a = input("anagle :")
-    #data = a
     msg = str.encode(x, 'utf-8')
     print(msg)
     s.send(msg)
     data1 = s.recv(1024)
-    #b = int(data1.decode())
-    #print(b)
-    #if b < 200:
-    #    data = str(a)
-    #    msg =str.encode(data, 'utf-8')
-    #    s.send(msg)
-    #else:
-    #    c = 1
-    #    data2 = str(c)
-    #    msg2 = str.encode(data2, 'utf-8')
-    #    s.send(msg2)
-    #time.sleep()
+    
 
  
