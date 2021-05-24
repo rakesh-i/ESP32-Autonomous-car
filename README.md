@@ -133,7 +133,7 @@ Follow this [link](https://github.com/rakesh-i/ESP32-RC-car/tree/main) on how to
 If you have done everything  right upto this point your autonomous car is ready for its first autonomous steps. 
 * If you are running a good system you can turn up the speed of the car. Otherwise reduce the speed of car, so your system has time to process the data and produce predictions.
 * Turn on your car and put it on the track.
-* When car is ready to go run "run.py". 
+* When car is ready to go, run "run.py". 
 
 Thats it, now your car should follow the track autonomously.
   
