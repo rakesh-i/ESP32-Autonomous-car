@@ -124,7 +124,9 @@ Follow this [link](https://github.com/rakesh-i/ESP32-RC-car/tree/main) on how to
 4. Start stream.py and start driving the car on the track. reduce the speed of car for greater control. `Change values in motor.motorSpeed(x).(Max = 1000, min = 0)` 
 5. Quit by pressing q when you are satisfied with your training or delete the "train_data.npy" and start again. I recommend around 20000 frames for your first model. You can see how many frames are recorded on terminal. 
 6. Now  we need to balance our data. Run balance.py. It will create a file "balanced.npy" with balanced data.
-7. Now time to train our AI model. You can change prameters which suits your requirements. But I recommend to leave as it is for beginners. Run train_model.py. It will create your model based on your trainning data.
+7. Checking the training data. <img src="media/ezgif.com-gif-maker.gif" alt="Logo" width="800" height="500">
+9. Now time to train our AI model. You can change prameters which suits your requirements. But I recommend to leave as it is for beginners. Run train_model.py. It will create your model based on your trainning data.
+
 ## Testing 
 If you have done everything  right upto this point your autonomous car is ready for its first autonomous steps. 
 * If you are running a good system you can turn up the speed of the car. Otherwise reduce the speed of car, so your system has time to process the data and produce predictions.
@@ -132,8 +134,8 @@ If you have done everything  right upto this point your autonomous car is ready 
 * When car is ready to go run "run.py". 
 
 Thats it your car should flollow the track autonomously.
-
-
+<img src="media/ezgif.com-gif-maker.gif" alt="Logo" width="800" height="500">
+<img src="media/ezgif.com-gif-maker.gif" alt="Logo" width="800" height="500">
 
 
 
