@@ -44,7 +44,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-There are many autonomous car porjects on GitHub, however, many of those require costly hardware or it is just a simulation. I want everyone who is interested in AI, ML and autonomous vehicles to have hands on approach on building, training and deploying a autonomous vehicle.
+There are many autonomous car projects on GitHub, however, many of those require costly hardware or it is just a simulation. I want everyone who is interested in AI, ML and autonomous vehicles to have hands on approach on building, training and deploying a autonomous vehicle.
 
 Key Features:
 * This porject uses very cheap off the shelf items to build your own autonomous car.
