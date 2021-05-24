@@ -135,7 +135,7 @@ If you have done everything  right upto this point your autonomous car is ready 
 * Turn on your car and put it on the track.
 * When car is ready to go run "run.py". 
 
-Thats it your car should flollow the track autonomously.
+Thats it, now your car should follow the track autonomously.
   
   <img src="media/test3.gif" alt="Logo" width="800" height="500">
   <img src="media/ontrack.gif" alt="Logo" width="800" height="500">
