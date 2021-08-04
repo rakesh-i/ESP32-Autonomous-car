@@ -1,3 +1,7 @@
+#New
+Added pid functionality to remove erratic movements of steering servo. Change PID values to suit your car.
+
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
