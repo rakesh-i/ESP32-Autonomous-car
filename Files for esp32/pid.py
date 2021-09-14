@@ -12,7 +12,7 @@ def soc():
     
     #socket setup
     s = socket.socket()         # Create a socket object
-    host = '192.168.137.142'    # Get local machine name
+    host = '192.168.0.110'    # Get local machine name
     port = 12345                # Reserve a port for your service.
     s.bind((host, port))        # Bind to the port
     s.listen(5)                 # Now wait for client connection.
@@ -31,15 +31,17 @@ def soc():
             data = str(d)
             msg =str.encode(data, 'utf-8')
             c.send(msg)
-            a = c.recv(1028)
+            a = c.recv(1024)
             com = a.decode()       
             de = json.loads(com)#deserialze incoming dictionary
 
             angle = int(de['a'])
             servo.duty(angle)
             print(angle)
-            if de["w"] == 1:
-                motor.motorSpeed(-200)
+            if de["w"] > 0:
+                motor.motorSpeed(int(de["w"]))
+            else:
+                motor.motorSpeed(0)
             
                 
             #print(de) #for debugging
