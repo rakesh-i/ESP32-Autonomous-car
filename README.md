@@ -1,7 +1,3 @@
-### New
-Added pid functionality to remove erratic movements of steering servo. Change PID values to suit your car.
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -14,7 +10,10 @@ Added pid functionality to remove erratic movements of steering servo. Change PI
   </p>
 </p>
 
-
+### New
+* Added line follower functionality to train faster and without assistance(no need to drive same path endlessly).
+![track][opencvtrack]
+* Added pid functionality to remove erratic movements of steering servo. Change PID values to suit your car.
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -177,3 +176,4 @@ Project Link: [https://github.com/rakesh-i/Autonomous-car/](https://github.com/r
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: media/img.jpg
+[opencvtrack]: media/visiontrack.png
