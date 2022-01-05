@@ -14,6 +14,7 @@
 * Added line follower functionality to train faster and without assistance(no need to drive same path endlessly).
 ![track][opencvtrack]
 * Added pid functionality to remove erratic movements of steering servo. Change PID values to suit your car.
+* Added Keyboard control for linux OS systems.
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -84,7 +85,7 @@ Follow this [link](https://github.com/rakesh-i/ESP32-RC-car/tree/main) on how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/rakesh-i/Autonomous-car
+   git clone https://github.com/rakesh-i/ESP32-Autonomous-car
    ```
 2. Install MicroPyhon on ESP32
    
