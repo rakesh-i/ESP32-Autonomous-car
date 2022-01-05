@@ -1,7 +1,7 @@
 import socket               # Import socket module
 import time
 import json
-from log import key_check
+from linuxLog import key_check
 
 
 
