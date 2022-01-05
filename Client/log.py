@@ -13,19 +13,21 @@ def key_check():
     return keys
 
 
-def key_out(key):
-    output = [0, 0, 0, 0]
-    if 'A' in key:
-        output[0] = 1
-    if 'D' in key:
-        output[3] = 1
-    if 'W' in key:
-        output[1] = 1
-    if 'S' in key:
-        output[2] = 1
-    return output
 
-#for debugging
+#For debugging
+
+#def key_out(key):
+#    output = [0, 0, 0, 0]
+#    if 'A' in key:
+#        output[0] = 1
+#    if 'D' in key:
+#        output[3] = 1
+#    if 'W' in key:
+#        output[1] = 1
+#    if 'S' in key:
+#        output[2] = 1
+#    return output
+
 #while True:
    # key = key_check()
     #print(key)
