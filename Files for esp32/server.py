@@ -12,16 +12,18 @@ def soc():
     
     #socket setup
     s = socket.socket()         # Create a socket object
-    host = '192.168.0.110'    # Get local machine name
+    host = '192.168.1.110'    # Get local machine name
     port = 12345                # Reserve a port for your service.
     s.bind((host, port))        # Bind to the port
     s.listen(5)      # Now wait for client connection.
     
     
     def con(): 
+    	motor.motroSpeed(0)
         while True:
             c, addr = s.accept()    # Establish connection with client.
             print ('Got connection from', addr)
+            
             
             while True:
                 d = "thank you for connection"
@@ -44,8 +46,10 @@ def soc():
                         servo.duty(75)
                     if de["w"] == 0 and de["s"] == 0:
                         motor.motorSpeed(0)
+                    print(de) #for debugging
+
                 except:
                     con()
     con()
 
-            #print(de) #for debugging
+           # print(de) #for debugging
