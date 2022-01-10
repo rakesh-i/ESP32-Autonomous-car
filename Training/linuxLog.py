@@ -10,12 +10,12 @@ def x2():
         return 1
     else:
         return 0
-def x3():
+def x4():
     if keyboard.is_pressed('s'):
         return 1
     else:
         return 0
-def x4():
+def x3():
     if keyboard.is_pressed('d'):
         return 1
     else:
@@ -29,11 +29,10 @@ def key_check():
     d = 0
     a = int(x1())
     w = int(x2())
-    s = int(x3())
-    d = int(x4())
+    s = int(x4())
+    d = int(x3())
     keys[0] = a
     keys[1] = w
-    keys[2] = s
-    keys[3] = d
+    keys[2] = d
+    keys[3] = s
     return keys
-
