@@ -30,7 +30,7 @@ for data in train_data:
         pass#print('no matches')
 forwards = forwards[:len(lefts)][:len(rights)]
 rights = rights[:len(forwards)]
-lefts = lefts[:len(lefts)]
+lefts = lefts[:len(forwards)]
 print(len(forwards), len(rights), len(lefts))
 final_data = forwards + lefts + rights
 
