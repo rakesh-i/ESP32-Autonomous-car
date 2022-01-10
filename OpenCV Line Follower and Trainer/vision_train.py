@@ -5,7 +5,7 @@ import os
 import socket
 
 s = socket.socket()         # Create a socket object
-host = '192.168.0.100'      # Get local machine name
+host = '192.168.1.110'      # Get local machine name
 port = 12345                # Reserve a port for your service.
 s.connect((host, port))
 
@@ -51,17 +51,17 @@ def servo_angle(z):
     return steer_angle
 
 
-cap = cv2.VideoCapture('http://192.168.0.104:81/stream')
+cap = cv2.VideoCapture('http://192.168.1.104:81/stream')
 
 while True:
     l = 0
     r = 0
     ret, frame = cap.read()
-    rotate = cv2.rotate(frame, cv2.ROTATE_180)
-    screen = cv2.cvtColor(rotate, cv2.COLOR_BGR2GRAY)
+    #rotate = cv2.rotate(frame, cv2.ROTATE_180)
+    screen = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     screen = cv2.resize(screen, (80, 60))
     kernel = np.ones((15,15), np.float32)/225
-    smoothed = cv2.filter2D(rotate, -1, kernel)
+    smoothed = cv2.filter2D(frame, -1, kernel)
     #edges = cv2.Canny(screen,100,200)
     low_b = np.uint8([55, 55, 55])
     high_b = np.uint8([0, 0, 0])
@@ -76,8 +76,8 @@ while True:
             #print("CX : "+str(cx)+"  CY : "+str(cy))
             w = convert(cx, 0, 300, -500, 500)
             propotional_angle = int(w)
-            derivative_angle = int(w) - last_pos
-            integral_angle = int(w) + last_pos
+            derivative_angle = propotional_angle - last_pos
+            integral_angle = propotional_angle + last_pos
             steer = (propotional_angle*KP + derivative_angle*KD + integral_angle*KI)
             z = int(correction(steer))
             st = servo_angle(z)
@@ -90,7 +90,7 @@ while True:
             #print(msg)
             s.send(msg)
             data1 = s.recv(1024)
-            last_pos = int(w)
+            last_pos = propotional_angle
             a = [0, 0, 0]
             if st > 78:
                 a = [0, 1, 1]
@@ -115,13 +115,23 @@ while True:
         #print(msg)
         s.send(msg)
         data1 = s.recv(1024)
-    cv2.drawContours(rotate, contours, -1, (0,255,0), 1)
+    #cv2.drawContours(frame, contours, -1, (0,255,0), 1)
     #cv2.imshow("gray", screen)
     #cv2.imshow('frame2', rotate)
-    cv2.imshow('mask', mask)
-    cv2.imshow('smooth', smoothed)
+    #cv2.imshow('mask', mask)
+    #cv2.imshow('smooth', smoothed)
     #cv2.imshow("canny", edges)
     if cv2.waitKey(1) & 0xFF == ord('q'):
+        print("QUIT")
+        x = '{"a":'
+        x += str(75)
+        x += ',"w":'
+        x += str(0)
+        x += "}"
+        msg = str.encode(x, 'utf-8')
+        #print(msg)
+        s.send(msg)
+        data1 = s.recv(1024)
         break
 
 cap.release()
