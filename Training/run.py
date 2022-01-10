@@ -11,7 +11,7 @@ s = socket.socket()         # Create a socket object
 host = '192.168.1.110'    
 port = 12345                # Reserve a port for your service.
 s.connect((host, port))
-cap = cv2.VideoCapture('http://192.168.1.104/stream') #esp32cam ip
+cap = cv2.VideoCapture('http://192.168.1.104:81/stream') #esp32cam ip
 #time.sleep(5)
 
 WIDTH = 80
@@ -25,8 +25,8 @@ model.load(MODEL_NAME)
 
 while(True):
     ret, frame = cap.read()
-    rotate = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
-    screen = cv2.cvtColor(rotate, cv2.COLOR_BGR2GRAY)
+    #rotate = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
+    screen = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     screen = cv2.resize(screen, (80, 60))
     #cv2.imshow('screen', screen)
     prediction = model.predict([screen.reshape(WIDTH, HEIGHT, 1)])[0]
