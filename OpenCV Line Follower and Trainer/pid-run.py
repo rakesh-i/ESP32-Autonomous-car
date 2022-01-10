@@ -6,18 +6,18 @@ import os
 import time
 from alexnet import alexnet
 s = socket.socket()         # Create a socket object
-host = '192.168.0.110' # Get local machine name
+host = '192.168.1.110' # Get local machine name
 port = 12345                # Reserve a port for your service.
 s.connect((host, port))
-cap = cv2.VideoCapture('http://192.168.0.104:81/stream')
+cap = cv2.VideoCapture('http://192.168.1.104:81/stream')
 #time.sleep(5)
 
-speed = 80
+speed = 300
 
 last_pos = 0
 w = 0
-KP = 1
-KD = 2.4
+KP = .8
+KD = 5
 KI = .5
 max_correction = 1000
 
@@ -67,8 +67,8 @@ def servo_angle(z):
 while(True): 
     #moves = [0, 0, 0]
     ret, frame = cap.read()
-    rotate = cv2.rotate(frame, cv2.ROTATE_180)
-    screen = cv2.cvtColor(rotate, cv2.COLOR_BGR2GRAY)
+    #rotate = cv2.rotate(frame, cv2.ROTATE_180)
+    screen = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     screen = cv2.resize(screen, (80, 60))
     #cv2.imshow('screen', screen)
     prediction = model.predict([screen.reshape(WIDTH, HEIGHT, 1)])[0]
@@ -76,8 +76,8 @@ while(True):
     w = convert(weighted(moves), 0, 1000, -500, 500)
 
     propotional_angle = int(w)
-    derivative_angle = int(w) - last_pos
-    integral_angle = int(w) + last_pos
+    derivative_angle = propotional_angle - last_pos
+    integral_angle = propotional_angle + last_pos
     steer = (propotional_angle*KP + derivative_angle*KD + integral_angle*KI)
     z = int(correction(steer))
     st = servo_angle(z)
@@ -88,10 +88,10 @@ while(True):
     x += "}"
     msg = str.encode(x, 'utf-8')
     #print(st, w, steer,moves, prediction )
-    #print(msg)
+    print(msg)
     s.send(msg)
     data1 = s.recv(1024)
-    last_pos = int(w)
+    last_pos = propotional_angle
     
     #a.pop()
     #print(a)
