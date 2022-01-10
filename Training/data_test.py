@@ -4,7 +4,7 @@ from collections import Counter
 from random import shuffle
 import cv2
 
-train_data = np.load('trained.npy', allow_pickle=True)
+train_data = np.load('balanced.npy', allow_pickle=True)
 #train_data = np.load('training_data.npy', allow_pickle=True)
 
 
