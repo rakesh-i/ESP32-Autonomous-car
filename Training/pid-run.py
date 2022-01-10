@@ -24,8 +24,8 @@ max_correction = 1000
 WIDTH = 80
 HEIGHT = 60
 LR = 1e-3
-EPOCHS = 10
-MODEL_NAME = 'autonomous_car-{}-{}-{}-epochs.model'.format(LR, 'alexnetv2',EPOCHS)
+EPOCHS = 8
+MODEL_NAME = 'autonomous_car-{}-{}-{}-epochs.model'.format(LR, 'alexnet',EPOCHS)
    
 model = alexnet(WIDTH, HEIGHT, LR)
 model.load(MODEL_NAME)
