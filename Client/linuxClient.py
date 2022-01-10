@@ -17,11 +17,11 @@ try:
         x = '{"a":'
         x += str(a[0])
         x += ',"d":'
-        x += str(a[3])
+        x += str(a[2])
         x += ',"w":'
         x += str(a[1])
         x += ',"s":'
-        x += str(a[2])
+        x += str(a[3])
         x += "}"
         msg = str.encode(x, 'utf-8')
         print(msg)
