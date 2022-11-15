@@ -6,6 +6,3 @@ import web
 web.connect()
 import server
 server.soc()
-
-
-
